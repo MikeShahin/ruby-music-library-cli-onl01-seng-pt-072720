@@ -8,4 +8,8 @@ class MusicImporter
   def files
     @files ||= Dir.glob("#{path}/*.mp3").collect{ |i| i.gsub("#{path}/", "")}
   end
+  
+  def import
+    
+  end
 end
