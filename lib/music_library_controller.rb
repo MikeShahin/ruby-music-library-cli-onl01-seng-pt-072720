@@ -90,7 +90,7 @@ class MusicLibraryController
     if (1..Song.all.length).include?(user)
       song = Song.all.sort{|x, y| x.name <=> y.name}[user - 1]
     end
-    puts ""
+    puts "Playing #{song.name} by #{song.artist.name}"
       
   end
 end
