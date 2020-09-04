@@ -85,7 +85,11 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     
-    song = gets.strip
+    user = gets.strip
+    
+    if Song.include?(user)
+      song = Song.all.sort
+      
   end
 end
 
