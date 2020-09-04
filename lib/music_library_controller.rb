@@ -87,8 +87,10 @@ class MusicLibraryController
     
     user = gets.strip
     
-    if Song.include?(user)
-      song = Song.all.sort
+    if (1..Song.all.length).include?(user)
+      song = Song.all.sort{|x, y| x.name <=> y.name}[user - 1]
+    end
+    puts ""
       
   end
 end
